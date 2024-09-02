@@ -1,0 +1,69 @@
+/* Google Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Globals  */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables  */
+:root {
+    --bg-color: #fd4646;
+    --char-color: white;
+    --obst-color: #171427;
+}
+
+/* ============================== */
+
+.game-container {
+    width: 400px;
+    height: 500px;
+    background-color: var(--bg-color);
+    margin: auto;
+    border: 5px solid black;
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.character {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 400px;
+    left: 120px;
+    border-radius: 50%;
+    background-color: var(--char-color);
+    z-index: 1000;
+}
+
+.block {
+    width: 100%;
+    height: 20px;
+    background-color: var(--obst-color);
+    position: absolute;
+    animation: moveDown 5s linear forwards;
+}
+
+.hole {
+    width: 70px;
+    height: 20px;
+    background-color: var(--bg-color);
+    position: absolute;
+    animation: moveDown 5s linear forwards;
+}
+
+@keyframes moveDown {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: 100%;
+        display: none;
+        visibility: hidden;
+    }
+}
