@@ -56,7 +56,7 @@ const generateObstacle = () => {
 
 // start button
 startbtn.addEventListener('click', () => {
-    setInterval(generateObstacle, 1000);
+    setInterval(generateObstacle, 1500);
 });
 
 const checkCollisions = () => {
